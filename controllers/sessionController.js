@@ -7,7 +7,7 @@ exports.getPublicSessions = async (req, res) => {
 
 exports.getMySessions = async (req, res) => {
   const sessions = await Session.find({ user_id: req.user.id });
-  res.json(sessions);
+    res.json({ sessions }); 
 };
 
 exports.getSessionById = async (req, res) => {
